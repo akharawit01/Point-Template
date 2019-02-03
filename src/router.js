@@ -23,6 +23,7 @@ import Excursions from './views/services/Excursions.vue'
 import ExcursionsDetail from './views/services/ExcursionsDetail.vue'
 import SpaType from './views/services/SpaType.vue'
 import SpaDetail from './views/services/SpaDetail.vue'
+import Privacy from './views/Privacy.vue'
 
 import SignIn from './views/signin'
 import Login from './views/signin/Login'
@@ -38,6 +39,7 @@ import UsingPoint from './views/user/UsingPoint'
 import TopupHistory from './views/user/TopupHistory'
 import BorrowHistory from './views/user/BorrowHistory'
 import TranferHistory from './views/user/TranferHistory'
+import ChangePassword from './views/user/ChangePassword'
 import MessageBox from './views/user/MessageBox'
 
 const routes = [
@@ -65,6 +67,7 @@ const routes = [
   { path: '/spa/:type/:id', component: SpaDetail },
   { path: '/excursions', component: Excursions },
   { path: '/excursions/:id', component: ExcursionsDetail },
+  { path: '/privacy', component: Privacy },
   {
     path: '/signin',
     component: SignIn,
@@ -86,6 +89,7 @@ const routes = [
       { path: '/user/topup-history', component: TopupHistory },
       { path: '/user/borrow-history', component: BorrowHistory },
       { path: '/user/tranfer-history', component: TranferHistory },
+      { path: '/user/change-password', component: ChangePassword },
       { path: '/user/message-box', component: MessageBox }
     ]
   },

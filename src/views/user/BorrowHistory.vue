@@ -1,34 +1,46 @@
 <template>
   <div class="border p-3">
-    <table class="table table-mdf">
+    <table class="table text-center">
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">จำนวนที่ยืม (คะแนน)</th>
-          <th scope="col">วันที่ยืม</th>
-          <th scope="col">ใช้ได้ถึง</th>
-          <th scope="col" style="width: 140px">&nbsp;</th>
+          <th scope="col">Borrow date</th>
+          <th scope="col">Borrow (Points)</th>
+          <th scope="col">Fee (Points)</th>
+          <th scope="col">Valid until</th>
+          <th scope="col">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(item, index) in items">
-          <th scope="row">{{index+1}}</th>
-          <th scope="row">2,000</th>
-          <td>11-12-2560</td>
-          <td>30-12-2560</td>
-          <td><button type="button" v-b-modal.modal-topup-history>คลิกดูรายละเอียด</button></td>
+          <th>12/11/2561</th>
+          <td>100</td>
+          <td>1,500</td>
+          <td>12/11/2562</td>
+          <td>
+            <b-button class="btn-mdf-table mr-1" @click="openModal">More information</b-button>
+          </td>
         </tr>
       </tbody>
     </table>
+    <ModalBorrow ref="modal" />
   </div>
 </template>
 
 <script>
+import ModalBorrow from './modals/Borrow'
 export default {
   name: 'BorrowHistory',
+  components: {
+    ModalBorrow
+  },
   data() {
     return {
       items: [1,2,3,4,5,6]
+    }
+  },
+  methods: {
+    openModal() {
+      this.$refs.modal.showModal()
     }
   }
 }

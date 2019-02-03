@@ -1,14 +1,14 @@
 <template>
   <div class="card-slide"> 
-    <b-container>
+    <b-container class="position-relative">
       <h1 class="title title-black">Special of the month</h1>
       <!-- swiper -->
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" ref="swiper">
         <swiper-slide><CardStyle1 /></swiper-slide>
         <swiper-slide><CardStyle1 /></swiper-slide>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
+      <div class="swiper-button-prev" slot="button-prev" @click="swiper.slidePrev()"></div>
+      <div class="swiper-button-next" slot="button-next" @click="swiper.slideNext()"></div>
     </b-container>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   name: 'CardSlide',
   components: {
     CardStyle1
+  },
+  computed: {
+    swiper() {
+      return this.$refs.swiper.swiper;
+    }
   },
   data() {
     return {

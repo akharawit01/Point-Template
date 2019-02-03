@@ -155,6 +155,9 @@
       width: min-content;
     }
   }
+  a {
+    color: #fff;
+  }
 }
 .copy-rights {
   background: #000;
@@ -172,7 +175,6 @@
     color: #221F1F!important;
     min-width: 100px;
   }
-
   &-mdf,
   &-card {
     background: #E1B86A!important;
@@ -188,6 +190,12 @@
   }
   &-card {
     font-size: 1rem!important;
+  }
+  &-mdf-table {
+    background: #E1B86A!important;
+    border: 0!important;
+    font-size: .8rem!important;
+    color: #FFF;
   }
 }
 
@@ -273,6 +281,14 @@
       border: 0;
       font-size: .9rem;
       margin: 0 5px;
+    }
+  }
+
+  // Topup Type
+  &-style-topup {
+    .card-img-top{
+      width: 100px!important;
+      margin: 30px auto 0!important;
     }
   }
 
@@ -428,6 +444,7 @@
 
 // ServicePage
 .service-head {
+  margin-top: 95px;
   padding: 60px 0;
   .title {
     padding: 25px 0;
@@ -613,12 +630,8 @@
   margin-top: 15px;
   & a {
     border: 0;
-    color: red;
+    color: #917D62;
     padding: 10px 20px;
-    &.active {
-      background: green;
-      color: #fff;
-    }
     &:first-child,
     &:last-child {
       border-radius: 0;
@@ -663,28 +676,31 @@
     transform: translate(0, -50%);
   }
   & img {
-    height: 55px;
-    top: 40%;
+    height: 42px;
+    top: 70px;
   }
   & .title {
-    left: 30%;
-    width: 68%;
+    font-size: .8rem;
+    font-weight: normal;
+    left: 55px;
+    width: 125px;
     text-align: left;
-    font-weight: 300;
-    padding-left: 5px;
+    padding-left: 4px;
     &>span {
-      font-size: .9rem;
       text-align: right;
       &.txt-point {
-        border-top: 1px solid green;
-        font-size: 1.5rem;
-        font-weight: 900;
+        border-top: 1px solid #dcb965;
+        font-size: 1rem;
+        font-weight: bold;
         margin-bottom: -10px;
         &-green {
           border-color: #8bc832;
         }
         &-blue {
           border-color: #4cbdef;
+        }
+        &-red {
+          border-color: #f35553;
         }
         &.border-green {
           border-top: 1px solid green;
@@ -701,6 +717,18 @@
   .title-border {
     border-bottom: 1px solid #856e4e;
     padding: 0;
+  }
+  .title-border-mdf {
+    &::before {
+      background: #856e4e;
+      bottom: 0;
+      content: '';
+      left: 50%;
+      height: 1px;
+      position: absolute;
+      transform: translate(-50%, 0);
+      width: 250px;
+    }
   }
   .modal-body {
     padding: 2rem 5rem;
@@ -727,6 +755,11 @@
         line-height: 1.2rem;
       }
     }
+  }
+  .input-group-text {
+    color: #856e4e;
+    background: transparent!important;
+    border: 1px solid!important;
   }
   // Tab
   .tab-topup {
@@ -793,5 +826,71 @@
       width: 20px!important;
       height: 20px!important;
     }
+  }
+}
+.font-size-sm {
+  font-size: .5rem;
+  padding-top: 4px;
+  font-weight: normal;
+}
+.clr-red {
+  color: #FF0000;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  width: 44px!important;
+  height: 44px;
+  background-size: 44px 44px!important;
+  top: 65%!important;
+}
+.swiper-button-prev {
+  background-image: url("~./assets/images/swi-prev.png") !important;
+  left: -50px!important;
+}
+.swiper-button-next {
+  background-image: url("~./assets/images/swi-next.png") !important;
+  right: -50px!important;
+}
+
+// input file mdf 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  & .btn {
+    border: 0;
+    color: #fff;
+    background-color: #dbb969;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+  
+  & input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+// Messagebox
+.message-box {
+  color: #856e4e;
+  font-size: .8rem;
+  padding: 5px;
+  border: 1px solid #856e4e;
+  border-radius: 5px;
+  .mbs-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #856e4e;
+    padding: 0 5px;
+  }
+  p {
+    margin-top: 15px;
   }
 }

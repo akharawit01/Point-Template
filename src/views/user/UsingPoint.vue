@@ -1,47 +1,49 @@
 <template>
   <div class="border p-3">
-    <table class="table table-mdf">
+    <table class="table text-center">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">ชื่อของรางวัล</th>
-          <th scope="col">โค้ด</th>
-          <th scope="col">ใช้ได้ถึง</th>
-          <th scope="col">สถานะ</th>
+          <th scope="col">Date</th>
+          <th scope="col">Reward name</th>
+          <th scope="col">Confirmation ID</th>
+          <th scope="col">Status</th>
           <th scope="col">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>McDolnal</td>
+        <tr v-for="(item, index) in items">
+          <th>12/11/2561</th>
+          <td>The Exclusive</td>
           <td>A2379c3675</td>
-          <td>11/11/2018</td>
-          <td><span class="badge badge-pill badge-warning">รอการยืนยัน</span></td>
+          <td>Complete</td>
           <td>
-            <button type="button" class="mr-1">คลิกดูรายละเอียด</button>
-            <button type="button">ยกเลิก</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>McDolnal</td>
-          <td>A2379c3675</td>
-          <td>11/11/2018</td>
-          <td><span class="badge badge-pill badge-info">ยืนยันแล้ว</span></td>
-          <td>
-            <button type="button" class="mr-1">คลิกดูรายละเอียด</button>
-            <button type="button">ยกเลิก</button>
+            <b-button class="btn-mdf-table mr-1" @click="openModal">More information</b-button>
+            <b-button class="btn-mdf-table">Cancel</b-button>
           </td>
         </tr>
       </tbody>
     </table>
+    <ModalUsing ref="modal" />
   </div>
 </template>
 
 <script>
+import ModalUsing from './modals/Using'
 export default {
-  name: 'HistoryPoint'
+  name: 'UsingUsing',
+  components: {
+    ModalUsing
+  },
+  data() {
+    return {
+      items: [1,2,3]
+    }
+  },
+  methods: {
+    openModal() {
+      this.$refs.modal.showModal()
+    }
+  }
 }
 </script>
 

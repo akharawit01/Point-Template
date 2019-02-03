@@ -1,7 +1,7 @@
 <template>
   <div class="card-style-1">
-    <b-card title="Card Title"
-          img-src="https://picsum.photos/600/300/?image=25"
+    <b-card title="Chef Choice-Cooking lesson"
+          :img-src="require('@/assets/images/pic1.jpg')"
           img-alt="Image"
           img-top
           tag="article"

@@ -1,7 +1,7 @@
 <template>
   <div class="card-style-2">
     <b-card title="The Exclusive"
-          img-src="https://picsum.photos/600/300/?image=25"
+          :img-src="require('@/assets/images/pic2.jpg')"
           img-alt="Image"
           img-top
           tag="article"

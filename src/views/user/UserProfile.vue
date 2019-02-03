@@ -1,6 +1,6 @@
 <template>
   <div class="row mt-5">
-    <div class="col-lg-10 offset-lg-1" v-if="editMode === 1">
+    <div class="col-lg-10 offset-lg-1">
       <div class="row">
         <div class="col-lg-3">
           <!-- swiper -->
@@ -12,37 +12,36 @@
         </div>
         <div class="col-lg-9">
           <dl class="row">
-            <dt class="col-sm-4">ชื่อ</dt>
+            <dt class="col-sm-4">Name</dt>
             <dd class="col-sm-8">Mr.Devid Long</dd>
 
-            <dt class="col-sm-4">เพศ</dt>
+            <dt class="col-sm-4">Gender</dt>
             <dd class="col-sm-8">ชาย</dd>
 
-            <dt class="col-sm-4">สัญชาติ</dt>
+            <dt class="col-sm-4">Nationality</dt>
             <dd class="col-sm-8">ไทย</dd>
 
-            <dt class="col-sm-4">เลขบัตรประชาชน</dt>
+            <dt class="col-sm-4">ID Card /passport number</dt>
             <dd class="col-sm-8">xxx-xxx-xxx-xxx</dd>
 
-            <dt class="col-sm-4">ที่อยู่ปัจจุบัน</dt>
+            <dt class="col-sm-4">Address</dt>
             <dd class="col-sm-8">123 ถ.นิมมานเหมิน ต.สุทพ อ.เมือง จ.เชียงใหม่</dd>
 
-            <dt class="col-sm-4">สถานะ</dt>
+            <dt class="col-sm-4">Status</dt>
             <dd class="col-sm-8">โสด</dd>
 
-            <dt class="col-sm-4">อาชีพ</dt>
+            <dt class="col-sm-4">Career</dt>
             <dd class="col-sm-8">แพทย์</dd>
 
-            <dt class="col-sm-4">โครงการที่ซ้ือล่าสุด</dt>
-            <dd class="col-sm-8">โครงการ 11 ห้อง 302</dd>
-
-            <dt class="col-sm-4">คะแนนที่กําลังจะหมดอายุ</dt>
-            <dd class="col-sm-8">
+            <dt class="col-sm-4">Valid until</dt>
+            <dd class="col-sm-8 clr-red">
               100 คะแนน 26/12/2561 <br /> 300 คะแนน 11/01/2562
             </dd>
+            <dt class="col-sm-4">Email</dt>
+            <dd class="col-sm-8">sample@sample.com</dd>
+            <dt class="col-sm-4">Contact detail</dt>
+            <dd class="col-sm-8">123 Nimmanhaemin Rd., Suthep, Muang Chiang Mai</dd>
           </dl>
-          <button type="button" class="btn btn-mdf hvr-sweep-to-right py-1 font-size-sm mr-2" v-on:click="editMode = 2">แก้ไขข้อมูล</button>
-          <button type="button" class="btn btn-mdf hvr-sweep-to-right py-1 font-size-sm" v-on:click="editMode = 3">เปลี่ยนรหัสผ่าน</button>
         </div>
       </div>
     </div>
@@ -131,7 +130,12 @@
 
 <script>
 export default {
-  name: 'UserProfile'
+  name: 'UserProfile',
+  data() {
+    return {
+      editMode: 1
+    }
+  },
 }
 </script>
 

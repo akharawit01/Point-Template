@@ -1,6 +1,6 @@
 <template>
   <div class="content-box guest-experience">
-    <img slot="img" class="d-block img-fluid w-100" src="@/assets/images/banner-about.jpg" alt="image slot">
+    <img slot="img" class="d-block img-fluid w-100" src="@/assets/images/hero.png" alt="image slot">
     <b-container>
       <h1 class="title title-img-middle">
         Guest Experience <br />

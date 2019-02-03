@@ -5,19 +5,19 @@
       <b-col md="10" offset-md="1">
         <b-row>
           <b-col>
-            <img src="@/assets/images/how-to-use-0.png" class="img-fluid" />
+            <img src="@/assets/images/how-to-use-1.png" class="img-fluid" />
             <p>Check user points and redeem a gift on website /application</p>
           </b-col>
           <b-col>
-            <img src="@/assets/images/how-to-use-1.png" class="img-fluid" />
+            <img src="@/assets/images/how-to-use-2.png" class="img-fluid" />
             <p>Check user points and redeem a gift at participating stores</p>
           </b-col>
           <b-col>
-            <img src="@/assets/images/how-to-use-2.png" class="img-fluid" />
+            <img src="@/assets/images/how-to-use-3.png" class="img-fluid" />
             <p>Send your code to participating stores</p>
           </b-col>
           <b-col class="text-or">
-            <img src="@/assets/images/how-to-use-3.png" class="img-fluid" />
+            <img src="@/assets/images/how-to-use-4.png" class="img-fluid" />
             <p>Scan a QR Code on your phone</p>
           </b-col>
         </b-row> 

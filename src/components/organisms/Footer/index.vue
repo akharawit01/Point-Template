@@ -23,10 +23,12 @@
           <b-col>
             <h6>Home page</h6>
             <ul>
-              <li>Home About</li>
-              <li>Product and services</li>
-              <li>Contact Vacation point</li>
-              <li>Privacy</li>
+              <li><a href="/#/">Home</a></li>
+              <li><a href="/#/about">About</a></li>
+              <li><a href="/#/guestexperience">Product and services</a></li>
+              <li><a href="/#/contact">Contact</a></li>
+              <li><a href="/#/membertrander">Vacation point</a></li>
+              <li><a href="/#/privacy">Privacy</a></li>
             </ul>
           </b-col>
           <b-col>

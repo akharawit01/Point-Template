@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="elementShow" />
     <router-view></router-view>
-    <Footer />
+    <Footer v-if="elementShow" />
   </div>
 </template>
 
@@ -18,11 +18,12 @@ export default {
   },
   data() {
     return {
-      elementShow: false
+      elementShow: true
     }
   },
   watch:{
     $route (to, from){
+      console.log(to.path)
       if (to.path === '/signin/login' || to.path ===  '/signin/reset-password' || to.path ===  '/signin/condition' || to.path ===  '/signin/success') {
         this.elementShow = false
       }else {

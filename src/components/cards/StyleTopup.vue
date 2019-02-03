@@ -1,11 +1,11 @@
 <template>
   <div class="card-style-topup">
     <b-card title="The Exclusive"
-          img-src="https://picsum.photos/600/300/?image=25"
+          :img-src="require('@/assets/images/img-topup.jpg')"
           img-alt="Image"
           img-top
           tag="article"
-          class="card-style1 mb-4">
+          class="card-style-topup mb-4">
       <span class="card-value-top">Top up 100 baht</span>
       <p class="card-text">
         Top up 100 baht <br /> = <br /> Experience Club 100 points

@@ -56,15 +56,16 @@
                 Gold member
               </div>
             </b-dropdown-item>
-            <b-dropdown-item href="#">Home</b-dropdown-item>
-            <b-dropdown-item href="#">Terms & Condition</b-dropdown-item>
-            <b-dropdown-item href="#">Point history</b-dropdown-item>
-            <b-dropdown-item href="#">In progress</b-dropdown-item>
-            <b-dropdown-item href="#">Top up history</b-dropdown-item>
-            <b-dropdown-item href="#">Borrow history</b-dropdown-item>
-            <b-dropdown-item href="#">Transfer history</b-dropdown-item>
-            <b-dropdown-item href="#">Inbox</b-dropdown-item>
-            <b-dropdown-item href="#">Log out</b-dropdown-item>
+            <b-dropdown-item href="/#/user/profile">Home</b-dropdown-item>
+            <b-dropdown-item href="/#/user/terms">Terms & Condition</b-dropdown-item>
+            <b-dropdown-item href="/#/user/history">Point history</b-dropdown-item>
+            <b-dropdown-item href="/#/user/using">In progress</b-dropdown-item>
+            <b-dropdown-item href="/#/user/topup-history">Top up history</b-dropdown-item>
+            <b-dropdown-item href="/#/user/borrow-history">Borrow history</b-dropdown-item>
+            <b-dropdown-item href="/#/user/tranfer-history">Transfer history</b-dropdown-item>
+            <b-dropdown-item href="/#/user/message-box">Inbox</b-dropdown-item>
+            <b-dropdown-item href="/#/user/change-password">Change password</b-dropdown-item>
+            <b-dropdown-item href="/#/signin/login">Log out</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>

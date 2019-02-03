@@ -1,38 +1,46 @@
 <template>
   <div class="border p-3">
-    <table class="table table-mdf">
+    <table class="table text-center">
       <thead>
         <tr>
+          <th scope="col">Top up date</th>
+          <th scope="col">Credit (THB)</th>
           <th scope="col">ID</th>
-          <th scope="col">เติมเมื่อ</th>
-          <th scope="col">นำนวน</th>
-          <th scope="col" style="width: 140px">&nbsp;</th>
+          <th scope="col">Valid until</th>
+          <th scope="col">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>11-12-2560</td>
+        <tr v-for="(item, index) in items">
+          <th>12/11/2561</th>
           <td>100</td>
-          <td><button type="button" v-b-modal.modal-topup-history>คลิกดูรายละเอียด</button></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>11-12-2560</td>
-          <td>100</td>
-          <td><button type="button" v-b-modal.modal-topup-history>คลิกดูรายละเอียด</button></td>
+          <td>A2379c3675</td>
+          <td>12/11/2562</td>
+          <td>
+            <b-button class="btn-mdf-table mr-1" @click="openModal">More information</b-button>
+          </td>
         </tr>
       </tbody>
     </table>
+    <ModalTopup ref="modal" />
   </div>
 </template>
 
 <script>
+import ModalTopup from './modals/Topup'
 export default {
   name: 'TopupHistory',
+  components: {
+    ModalTopup
+  },
   data() {
     return {
-      items: [1,2,3,4,5,6]
+      items: [1,2,3]
+    }
+  },
+  methods: {
+    openModal() {
+      this.$refs.modal.showModal()
     }
   }
 }
