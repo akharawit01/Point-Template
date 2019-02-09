@@ -14,7 +14,7 @@
         <b-row class="mb-2">
           <b-col cols="4">Date</b-col>
           <b-col cols="8">
-            <b-form-input type="text" />
+            <date-picker v-model="date" :config="{format: 'DD/MM/YYYY'}"></date-picker>
           </b-col>
         </b-row>
         <b-row class="mb-2">

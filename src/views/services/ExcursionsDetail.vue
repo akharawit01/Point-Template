@@ -19,7 +19,7 @@
           <p class="detail detail-ex">Redemption Point<br /> <span>4,500 points</span> per 2 persons</p>
           <p class="detail detail-ex">Redemption Point<br /> <span>4,500 points</span> per 2 persons</p>
           <p class="detail detail-ex">Redemption Point<br /> <span>4,500 points</span> per 2 persons</p>
-          <b-button class="btn-service" @click="openModal">Click to get voucher</b-button>
+          <b-button class="btn-service" @click="openModal">Reserve</b-button>
         </b-col>
       </b-row>
       <div>

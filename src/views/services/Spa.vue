@@ -5,13 +5,13 @@
       <b-container>
         <b-row class="justify-content-md-center">
           <b-col cols="4">
-            <CardStyleSpaType />
+            <CardStyleSpaType type="1" title="The New Concept Relaxing Massage" />
           </b-col>
           <b-col cols="4">
-            <CardStyleSpaType />
+            <CardStyleSpaType type="2" title="The New Medical Clinic" />
           </b-col>
           <b-col cols="4">
-            <CardStyleSpaType />
+            <CardStyleSpaType type="3" title="Privilege Spa Discount" />
           </b-col>
         </b-row>
       </b-container>

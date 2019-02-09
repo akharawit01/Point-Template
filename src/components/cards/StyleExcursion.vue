@@ -1,6 +1,6 @@
 <template>
   <div class="card-style-excursion">
-    <b-card title="The Exclusive"
+    <b-card title="Chef Choice-Cooking lesson"
           img-src="https://picsum.photos/600/300/?image=25"
           img-alt="Image"
           img-top

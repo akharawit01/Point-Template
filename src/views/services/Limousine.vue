@@ -5,16 +5,16 @@
       <b-container>
         <b-row>
           <b-col cols="3">
-            <CardStyleLimousine />
+            <CardStyleLimousine type="1" title="Car hire by hour" />
           </b-col>
           <b-col cols="3">
-            <CardStyleLimousine />
+            <CardStyleLimousine type="2" title="Airport Transfer In" />
+          </b-col>
+           <b-col cols="3">
+            <CardStyleLimousine type="2" title="Airport Transfer Out" />
           </b-col>
           <b-col cols="3">
-            <CardStyleLimousine />
-          </b-col>
-          <b-col cols="3">
-            <CardStyleLimousine />
+            <CardStyleLimousine type="3" title="Other arrangement" />
           </b-col>
         </b-row>
       </b-container>

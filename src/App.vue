@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header v-if="elementShow" />
+    <Header v-if="currentUrl" />
     <router-view></router-view>
-    <Footer v-if="elementShow" />
+    <Footer v-if="currentUrl" />
   </div>
 </template>
 
@@ -18,18 +18,20 @@ export default {
   },
   data() {
     return {
-      elementShow: true
+      currentUrl: true
     }
   },
   watch:{
     $route (to, from){
-      console.log(to.path)
-      if (to.path === '/signin/login' || to.path ===  '/signin/reset-password' || to.path ===  '/signin/condition' || to.path ===  '/signin/success') {
-        this.elementShow = false
-      }else {
-        this.elementShow = true
-      }
+      const isShowHeader = ['/signin/login', '/signin/reset-password', 
+      '/signin/condition', '/signin/success'].includes(to.path)
+      this.currentUrl = !isShowHeader
     }
+  },
+  created() {
+    const isShowHeader = ['/signin/login', '/signin/reset-password', 
+    '/signin/condition', '/signin/success'].includes(this.$route.path)
+    this.currentUrl = !isShowHeader
   }
 }
 </script>

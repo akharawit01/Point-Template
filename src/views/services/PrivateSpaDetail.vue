@@ -1,26 +1,26 @@
 <template>
-  <div class="content-box limousine-detail">
+  <div class="content-box spa-detail-page">
     <b-container>
       <b-row class="service-detail-top">
         <b-col cols="7">
-          <b-carousel id="carousel2"
+          <b-carousel
                 controls
                 indicators
                 :interval="4000"
-                v-model="slide"
           >
             <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58" />
             <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58" />
             <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58" />
           </b-carousel>
         </b-col>
-        <b-col cols="5">
-          <h1 class="title">{{title[type-1]}}</h1>
-          <p class="detail detail-lg">
-            Points to redeem <br />
-            Redeem <span>2,400</span> points
+        <b-col cols="5" class="pb-5">
+          <h1 class="title">Name of spae</h1>
+          <p class="detail">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel.
           </p>
-          <b-button class="btn-service" @click="openModal(type)">Reserve</b-button>
+          <p class="service-discount">10% discount</p>
+          <p class="service-time">Operation hours.....</p>
+          <b-button class="btn-service" @click="openModal(3)">Reserve</b-button>
         </b-col>
       </b-row>
       <div>
@@ -30,22 +30,16 @@
         <p>Suspendisse viverra libero urna, in commodo libero interdum eget. Praesent at mauris semper, sodales felis a, tristique sapien. Donec sit amet magna commodo, ultrices arcu ac, volutpat ante. Integer a molestie turpis. Proin id ex ut nibh interdum pulvinar. Aliquam non quam at lectus facilisis lacinia nec sit amet est. Suspendisse quis diam sed orci consectetur sollicitudin nec efficitur lacus. Morbi varius sit amet lorem non auctor. Quisque pulvinar consequat convallis. Sed tellus est, lacinia in consectetur ut, lacinia ut leo. Aliquam et mauris risus. Ut ultricies nisl et suscipit feugiat. Praesent rutrum quam dolor, a consectetur lacus cursus sed. Morbi a aliquam arcu.</p>
       </div>
     </b-container>
-    <ModalLimousine ref="modal" />
+    <ModalSpa ref="modal" />
   </div>
 </template>
 
 <script>
-import ModalLimousine from './modals/Limousine'
+import ModalSpa from './modals/Spa'
 export default {
-  name: 'LimousineDetail',
+  name: 'PrivateSpaDetail',
   components: {
-    ModalLimousine
-  },
-  data() {
-    return {
-      title: ['Car hire by hour', 'Airport Transfer In', 'Other arrangement'],
-      type: parseInt(this.$route.params.id)
-    }
+    ModalSpa
   },
   methods: {
     openModal(type) {

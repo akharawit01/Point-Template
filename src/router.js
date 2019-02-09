@@ -22,7 +22,10 @@ import Spa from './views/services/Spa.vue'
 import Excursions from './views/services/Excursions.vue'
 import ExcursionsDetail from './views/services/ExcursionsDetail.vue'
 import SpaType from './views/services/SpaType.vue'
+import PrivateSpaType from './views/services/PrivateSpaType.vue'
+import PrivateSpaDetail from './views/services/PrivateSpaDetail.vue'
 import SpaDetail from './views/services/SpaDetail.vue'
+import SpaDetail1 from './views/services/SpaDetail1.vue'
 import Privacy from './views/Privacy.vue'
 
 import SignIn from './views/signin'
@@ -65,6 +68,9 @@ const routes = [
   { path: '/spa', component: Spa },
   { path: '/spa/:type', component: SpaType },
   { path: '/spa/:type/:id', component: SpaDetail },
+  { path: '/privatespa/:type', component: PrivateSpaType },
+  { path: '/privatespa/:type/:id', component: PrivateSpaDetail },
+  { path: '/spa1', component: SpaDetail1 },
   { path: '/excursions', component: Excursions },
   { path: '/excursions/:id', component: ExcursionsDetail },
   { path: '/privacy', component: Privacy },
@@ -95,7 +101,10 @@ const routes = [
   },
 ]
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
 
 router.beforeEach((to, from, next) => {

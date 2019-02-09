@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button @click="showModal(2)">2</button>
-    <button @click="showModal(3)">3</button>
+    <!-- have type 1,2,3 -->
     <b-modal ref="ModalSpa" size="lg" hide-footer="true" hide-header="true">
       <h1 class="title pt-1 pb-0" v-if="modalSetp !== 2">The New Concept Relaxing Massage</h1>
       <!-- Step 0 -->
@@ -219,7 +218,13 @@
           </b-col>
         </b-row>
         <b-row class="mb-2">
-          <b-col cols="4">Your skin concern</b-col>
+          <b-col cols="4">Number of person</b-col>
+          <b-col cols="8">
+            <b-form-input type="text" />
+          </b-col>
+        </b-row>
+        <b-row class="mb-2">
+          <b-col cols="4">Special Requirement</b-col>
           <b-col cols="8">
             <b-form-input type="text" />
           </b-col>
